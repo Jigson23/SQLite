@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HermadosEvangelicos.Views.HomePage"
+             Title="Nueva Jerusalen"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Home}">
+            <StackLayout
+                Padding="10,20,10,5">
+                <Button
+                        Text="Registar"
+                        BackgroundColor="Navy"
+                        Command="{Binding RegistarComand}"
+                        IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                        HeightRequest="46"
+                        WidthRequest="125"
+                        TextColor="White"
+                        BorderRadius="23"
+                    ></Button>
+                    <Button
+                        Text="Buscar Listado"
+                        BackgroundColor="Purple"
+                        HeightRequest="46"
+                        WidthRequest="125"
+                        Command="{Binding BuscarComand}"
+                        IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                        TextColor="White"
+                        BorderRadius="23"
+                    ></Button>
+                <Button
+                        Text="Actualizar Web"
+                        BackgroundColor="Purple"
+                        HeightRequest="46"
+                        WidthRequest="125"
+                        Command="{Binding ActualizarComand}"
+                        IsEnabled="{Binding IsEnabled,Mode=TwoWay}"
+                        TextColor="White"
+                        BorderRadius="23"
+                    ></Button>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

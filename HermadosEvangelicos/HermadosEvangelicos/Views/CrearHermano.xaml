@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HermadosEvangelicos.Views.CrearHermano"
+             Title="Nueva Jerusalen"
+             BackgroundColor="White">
+
+  <ContentPage.Content>
+    <ScrollView>
+      <StackLayout Padding="10" Spacing="10">
+
+        <Label Text="Hermanos"
+            Font="24"
+            HorizontalOptions="Center"
+            TextColor="Blue"/>
+        <Entry x:Name="CedulaEntry"
+               Placeholder="Cedula"
+               Keyboard="Numeric"></Entry>
+        <Entry x:Name="nombreEntry"
+               Placeholder="Nombres"></Entry>
+        <Entry x:Name="apellidoEntry"
+               Placeholder="Apellidos"></Entry>
+        <Picker x:Name="sexoPicker" Title="Selecionar sexo"  HorizontalOptions="FillAndExpand">
+          <Picker.Items>
+            <x:String>Hombre</x:String>
+            <x:String>Mujer</x:String>
+          </Picker.Items>
+        </Picker>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Fecha de Nacimiento:"
+             TextColor="Blue"
+             Font="18"
+             VerticalOptions="Center"></Label>
+          <DatePicker x:Name="fechaNacDateP"
+                      HorizontalOptions="EndAndExpand"></DatePicker>
+        </StackLayout>
+
+        <Entry x:Name="provinciaEntry"
+               Placeholder="Provincia"></Entry>
+        <Entry x:Name="ciudadEntry"
+               Placeholder="Ciudad"></Entry>
+        <Entry x:Name="direccionEntry"
+               Placeholder="Direccion"></Entry>
+        <Entry x:Name="telefonoEntry"
+               Placeholder="Telefono"
+               Keyboard="Numeric"></Entry>
+        <Picker x:Name="CivilPicker" Title="Estado Civil"  HorizontalOptions="FillAndExpand">
+          <Picker.Items>
+            <x:String>Solter@</x:String>
+            <x:String>Casad@</x:String>
+            <x:String>Divorciad@</x:String>
+            <x:String>Viud@</x:String>
+            <x:String>Unid@</x:String>
+          </Picker.Items>
+        </Picker>
+        <Entry x:Name="TipoSangreEntry"
+               Placeholder="Tipo de Sangre"></Entry>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Esta Bautizado? NO o SI:"
+             TextColor="Blue"
+             Font="18"
+             VerticalOptions="Center"></Label>
+          <Switch x:Name="Bautizado"
+                  HorizontalOptions="EndAndExpand" IsToggled="False"></Switch>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Fecha de Bautizo:"
+             TextColor="Blue"
+             Font="18"
+             VerticalOptions="Center"></Label>
+          <DatePicker x:Name="FechaBauDateP"
+                      HorizontalOptions="EndAndExpand"></DatePicker>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Button x:Name="nuevoButton"
+              Text="Grabar"
+              HorizontalOptions="FillAndExpand"
+              BackgroundColor="Purple"
+              TextColor="White">
+
+          </Button>
+          <Button x:Name="CancelarButton"
+              Text="Cancelar"
+              HorizontalOptions="EndAndExpand"
+              BackgroundColor="YellowGreen"
+              TextColor="White">
+
+          </Button>
+        </StackLayout>
+
+
+      </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+
+</ContentPage>
