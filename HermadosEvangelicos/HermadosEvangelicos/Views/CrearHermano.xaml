@@ -66,28 +66,23 @@
         </StackLayout>
         <StackLayout Orientation="Horizontal">
           <Label Text="Fecha de Bautizo:"
-             TextColor="Blue"
-             Font="18"
-             VerticalOptions="Center"></Label>
+                TextColor="Blue"
+                Font="18"
+                VerticalOptions="Center"></Label>
           <DatePicker x:Name="FechaBauDateP"
                       HorizontalOptions="EndAndExpand"></DatePicker>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
-          <Button x:Name="nuevoButton"
-              Text="Grabar"
-              HorizontalOptions="FillAndExpand"
-              BackgroundColor="Purple"
-              TextColor="White">
-
-          </Button>
-          <Button x:Name="CancelarButton"
-              Text="Cancelar"
-              HorizontalOptions="EndAndExpand"
-              BackgroundColor="YellowGreen"
-              TextColor="White">
-
-          </Button>
-        </StackLayout>
+                    <Button x:Name="nuevoButton"
+                              Text="Grabar"
+                              HorizontalOptions="Center"
+                              BackgroundColor="Purple"
+                              TextColor="White"
+                            HeightRequest="46"
+                            WidthRequest="125"
+                            BorderRadius="23">            
+                    </Button>
+                </StackLayout>
 
 
       </StackLayout>

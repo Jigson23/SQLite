@@ -75,7 +75,35 @@ namespace HermadosEvangelicos.Views
                 using (var data = new DataAccess())
                 {
                     data.InsertEmpleado(hermano);
+                    if (data == null)
+                    {
+                        await DisplayAlert("Error", "Los Datos No pudierón ser Grabados", "Aceptar");
+                        return;
+                    }
+                    await DisplayAlert("Error", "Los Datos Fueron Grabados", "Aceptar");
+                    Limpiar();
+
                 }
+
+
+            }
+
+            void Limpiar()
+            {
+
+                CedulaEntry.Text = string.Empty;
+                nombreEntry.Text = string.Empty;
+                apellidoEntry.Text = string.Empty;
+                sexoPicker.SelectedIndex = -1;
+                fechaNacDateP.Date = DateTime.Now;
+                provinciaEntry.Text = string.Empty;
+                ciudadEntry.Text = string.Empty;
+                direccionEntry.Text = string.Empty;
+                telefonoEntry.Text = string.Empty;
+                CivilPicker.SelectedIndex = -1;
+                TipoSangreEntry.Text = string.Empty;
+                Bautizado.IsToggled = false;
+                FechaBauDateP.Date = DateTime.Now;
             }
 
         }

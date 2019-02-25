@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Home}">
-            <StackLayout
+            <StackLayout VerticalOptions="Center"
                 Padding="10,20,10,5">
                 <Button
                         Text="Registar"
