@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NuevaJerusalenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Hermano">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cedula" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="apellidos" Type="varchar" MaxLength="50" />
+          <Property Name="IdSexo" Type="varchar" MaxLength="10" />
+          <Property Name="Fecha_Nac" Type="datetime" />
+          <Property Name="IdProvincia" Type="varchar" MaxLength="13" />
+          <Property Name="Ciudad" Type="varchar" MaxLength="13" />
+          <Property Name="Direccion" Type="varchar" MaxLength="13" />
+          <Property Name="Telefono" Type="varchar" MaxLength="13" />
+          <Property Name="IdEstadoCivil" Type="varchar" MaxLength="13" />
+          <Property Name="TipoSangre" Type="varchar" MaxLength="13" />
+          <Property Name="Bautizo" Type="bit" />
+          <Property Name="FechaBautizo" Type="datetime" />
+          <Property Name="activo" Type="bit" />
+        </EntityType>
+        <Function Name="ConsultaGeneral" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertaHermanos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="varchar" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="apellidos" Type="varchar" Mode="In" />
+          <Parameter Name="IdSexo" Type="varchar" Mode="In" />
+          <Parameter Name="Fecha_Nac" Type="datetime" Mode="In" />
+          <Parameter Name="IdProvincia" Type="varchar" Mode="In" />
+          <Parameter Name="Ciudad" Type="varchar" Mode="In" />
+          <Parameter Name="Direccion" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono" Type="varchar" Mode="In" />
+          <Parameter Name="IdEstadoCivil" Type="varchar" Mode="In" />
+          <Parameter Name="TipoSangre" Type="varchar" Mode="In" />
+          <Parameter Name="Bautizo" Type="bit" Mode="In" />
+          <Parameter Name="FechaBautizo" Type="datetime" Mode="In" />
+          <Parameter Name="activo" Type="bit" Mode="In" />
+        </Function>
+        <EntityContainer Name="NuevaJerusalenModelStoreContainer">
+          <EntitySet Name="Hermano" EntityType="Self.Hermano" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NuevaJerusalenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Hermano">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cedula" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdSexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Nac" Type="DateTime" Precision="3" />
+          <Property Name="IdProvincia" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Ciudad" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="IdEstadoCivil" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="TipoSangre" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Bautizo" Type="Boolean" />
+          <Property Name="FechaBautizo" Type="DateTime" Precision="3" />
+          <Property Name="activo" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="NuevaJerusalenEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Hermano" EntityType="Self.Hermano" />
+          <FunctionImport Name="InsertaHermanos" ReturnType="Collection(NuevaJerusalenModel.InsertaHermanos_Result)">
+            <Parameter Name="cedula" Mode="In" Type="String" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="apellidos" Mode="In" Type="String" />
+            <Parameter Name="IdSexo" Mode="In" Type="String" />
+            <Parameter Name="Fecha_Nac" Mode="In" Type="DateTime" />
+            <Parameter Name="IdProvincia" Mode="In" Type="String" />
+            <Parameter Name="Ciudad" Mode="In" Type="String" />
+            <Parameter Name="Direccion" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="IdEstadoCivil" Mode="In" Type="String" />
+            <Parameter Name="TipoSangre" Mode="In" Type="String" />
+            <Parameter Name="Bautizo" Mode="In" Type="Boolean" />
+            <Parameter Name="FechaBautizo" Mode="In" Type="DateTime" />
+            <Parameter Name="activo" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="ConsultaGeneral" ReturnType="Collection(NuevaJerusalenModel.ConsultaGeneral_Result)" />
+        </EntityContainer>
+        <ComplexType Name="InsertaHermanos_Result">
+          <Property Type="Int32" Name="ErrorNumber" Nullable="true" />
+          <Property Type="String" Name="ErrorMessage" Nullable="true" MaxLength="4000" />
+        </ComplexType>
+        <ComplexType Name="ConsultaGeneral_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="cedula" Nullable="false" MaxLength="13" />
+          <Property Type="String" Name="nombre" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="apellidos" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="IdSexo" Nullable="true" MaxLength="10" />
+          <Property Type="DateTime" Name="Fecha_Nac" Nullable="true" Precision="23" />
+          <Property Type="String" Name="IdProvincia" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Ciudad" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Direccion" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="Telefono" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="IdEstadoCivil" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="TipoSangre" Nullable="true" MaxLength="13" />
+          <Property Type="Boolean" Name="Bautizo" Nullable="true" />
+          <Property Type="DateTime" Name="FechaBautizo" Nullable="true" Precision="23" />
+          <Property Type="Boolean" Name="activo" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NuevaJerusalenModelStoreContainer" CdmEntityContainer="NuevaJerusalenEntities">
+          <EntitySetMapping Name="Hermano">
+            <EntityTypeMapping TypeName="NuevaJerusalenModel.Hermano">
+              <MappingFragment StoreEntitySet="Hermano">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+                <ScalarProperty Name="Fecha_Nac" ColumnName="Fecha_Nac" />
+                <ScalarProperty Name="IdProvincia" ColumnName="IdProvincia" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="IdEstadoCivil" ColumnName="IdEstadoCivil" />
+                <ScalarProperty Name="TipoSangre" ColumnName="TipoSangre" />
+                <ScalarProperty Name="Bautizo" ColumnName="Bautizo" />
+                <ScalarProperty Name="FechaBautizo" ColumnName="FechaBautizo" />
+                <ScalarProperty Name="activo" ColumnName="activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="InsertaHermanos" FunctionName="NuevaJerusalenModel.Store.InsertaHermanos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NuevaJerusalenModel.InsertaHermanos_Result">
+                <ScalarProperty Name="ErrorNumber" ColumnName="ErrorNumber" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="ConsultaGeneral" FunctionName="NuevaJerusalenModel.Store.ConsultaGeneral">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="NuevaJerusalenModel.ConsultaGeneral_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="IdSexo" ColumnName="IdSexo" />
+                <ScalarProperty Name="Fecha_Nac" ColumnName="Fecha_Nac" />
+                <ScalarProperty Name="IdProvincia" ColumnName="IdProvincia" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="IdEstadoCivil" ColumnName="IdEstadoCivil" />
+                <ScalarProperty Name="TipoSangre" ColumnName="TipoSangre" />
+                <ScalarProperty Name="Bautizo" ColumnName="Bautizo" />
+                <ScalarProperty Name="FechaBautizo" ColumnName="FechaBautizo" />
+                <ScalarProperty Name="activo" ColumnName="activo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

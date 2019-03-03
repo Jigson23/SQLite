@@ -7,8 +7,6 @@ namespace HermadosEvangelicos
 {
     public class Hermano
     {
-        [PrimaryKey, AutoIncrement]
-        public int IdHermano { get; set; }
         public string cedula { get; set; }
         public string nombre { get; set; }
         public string apellidos { get; set; }

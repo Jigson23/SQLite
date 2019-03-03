@@ -1,0 +1,111 @@
+﻿@model IEnumerable<WebApi.Models.Hermano>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdSexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Nac)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProvincia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdEstadoCivil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoSangre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bautizo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaBautizo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.activo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdSexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_Nac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdProvincia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdEstadoCivil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoSangre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bautizo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaBautizo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.activo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cedula }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cedula }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cedula })
+        </td>
+    </tr>
+}
+
+</table>

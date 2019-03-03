@@ -1,0 +1,130 @@
+﻿@model WebApi.Models.Hermano
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hermano</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdSexo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdSexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Nac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Nac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProvincia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProvincia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdEstadoCivil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdEstadoCivil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoSangre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoSangre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bautizo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bautizo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaBautizo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaBautizo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.activo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.activo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cedula }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
